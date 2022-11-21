@@ -3,9 +3,13 @@ import { Flight } from './Flight';
 import { flightsApi } from "../components/rest/FlightsApi";
 
 
+
 export class FlightsList extends React.Component {
-        state = {
+    constructor(props){
+        super(props)
+        this.state = {
          flights : []
+        }
     };
     
 

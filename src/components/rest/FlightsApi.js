@@ -1,4 +1,4 @@
-const FLIGHTS_ENDPOINT = 'https://ancient-taiga-31359.herokuapp.com/api/houses';
+const FLIGHTS_ENDPOINT = 'https://6372952d348e947299f91994.mockapi.io/flights';
 
 class FlightsApi {
     get = async () => {
@@ -7,13 +7,14 @@ class FlightsApi {
             const data = await resp.json();
             return data;
         } catch(e) {
-            console.log('Oops, looks like fetchFlights had an issue', e);
+            console.log(`Oops, looks like fetchFlights had an issue`, e);
         }
     }
 
     put = async (flight) => {
         try{
             const resp = await fetch(`${FLIGHTS_ENDPOINT}/${flight.id}`, {
+               
                 method: 'PUT',
                 headers: {
                     'Content-Type' : 'application/json'
@@ -22,7 +23,7 @@ class FlightsApi {
             });
             return await resp.json();
         } catch(e) {
-            console.log('Oops, looks like updating flights had an issue', e);
+            console.log(`Oops, looks like updating flights had an issue`, e);
         }
     }
 }

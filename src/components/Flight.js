@@ -2,7 +2,7 @@ import React from "react";
 import {NewPassengerForm} from './NewPassengerForm';
 
 export const Flight = (props) => {
-    const { flight, updateFlight} = props;
+    const {flight, updateFlight} = props;
 
     const deletePassenger = (passengerId) => {
         const updatedFlight = {
@@ -19,14 +19,14 @@ export const Flight = (props) => {
             {flight.passengers.map((passenger, index) => (
                 <li key={index}>
                     <label> {`${passenger.name} Zone: ${passenger.zone}`} </label>
-                    <button onClick={(e) => deletePassenger(passenger.id)}>Remove Passenger</button>
+                    <button className="delete" onClick={(e) => deletePassenger(passenger.id)}>Remove Passenger</button>
                 </li>
             ))}
         </ul>
     );
     return(
         <div>
-            <h1>{flight.name}</h1>
+            <h1 className="h1">{flight.name}</h1>
             {
                 passengers({passengers, flightId: flight.id, deletePassenger})
             }
@@ -34,4 +34,4 @@ export const Flight = (props) => {
         </div>
     )
     
-}
+};

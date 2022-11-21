@@ -1,12 +1,38 @@
 body {
-  margin: 0;
+  text-align: center;
+  margin: 25px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.h1{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: crimson;
+}
+.h4{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: midnightblue;
+}
+.delete{
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+}
+.add{
+  background-color: midnightblue;
+  color: snow;
+  border-radius: 5px;
+}
+.name{
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+.zone{
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

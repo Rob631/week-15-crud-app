@@ -17,22 +17,24 @@ export const NewPassengerForm = (props) => {
 
     return(
         <div>
-            <h4> Add a new Passenger</h4>
+            <h4 className="h4"> Add a new Passenger</h4>
             <form onSubmit={onSubmit}>
-                <input
+                <input className="name"
                     type='text'
-                 placeholder='name'
-                 onChange={(e) => setName(e.target.value)}
+                    placeholder='name'
+                    onChange={(e) => setName(e.target.value)}
                     value={name}
                  />
+                 <br/>
             
-                <input
+                <input className="zone"
                     type='text'
                     placeholder='zone'
                     onChange={(e) => setZone(e.target.value)}
                     value={zone}
                 />
-                <button type='submit'>Add Passenger</button>
+                <br/>
+                <button className="add" type='submit'>Add Passenger</button>
 
             </form>
         </div>
